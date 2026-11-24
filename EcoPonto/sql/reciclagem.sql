@@ -56,4 +56,5 @@ CREATE TABLE historico_status (
     FOREIGN KEY (alterado_por) REFERENCES usuario(id)
 );
 
--- Os usuários de teste (admin, funcionário e usuário) são criados rodando instalar.php.
+-- agora vai
+
