@@ -20,10 +20,10 @@ try {
 
     //Cria os usuários de teste
     $contas = [
-        ['Administrador',     'admin@reciclagem.com',      '(12) 90000-0001', 'admin',       'aprovado', null,          null],
-        ['Carlos Entregador', 'entregador@reciclagem.com', '(12) 90000-0002', 'funcionario', 'aprovado', 'Caminhonete', 'Faço coletas na região central.'],
-        ['Paulo Candidato',   'candidato@reciclagem.com',  '(12) 90000-0004', 'funcionario', 'pendente',  'Moto',        'Quero trabalhar como entregador.'],
-        ['Ana Moradora',      'usuario@reciclagem.com',    '(12) 90000-0003', 'usuario',     'aprovado', null,          null],
+        ['Administrador',     'admin@gmail.com',      '(12) 90000-0001', 'admin',       'aprovado', null,          null],
+        ['Carlos Entregador', 'entregador@gmail.com', '(12) 90000-0002', 'funcionario', 'aprovado', 'Caminhonete', 'Faço coletas na região central.'],
+        ['Paulo Candidato',   'candidato@gmail.com',  '(12) 90000-0004', 'funcionario', 'pendente',  'Moto',        'Quero trabalhar como entregador.'],
+        ['Ana Moradora',      'usuario@gmail.com',    '(12) 90000-0003', 'usuario',     'aprovado', null,          null],
     ];
     $st = db()->prepare(
         'INSERT IGNORE INTO usuario (nome, email, telefone, senha_hash, perfil, status_cadastro, veiculo, apresentacao)
