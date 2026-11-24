@@ -1,5 +1,4 @@
 <?php
-// Conexão com o MySQL (PDO). Ajuste usuário e senha conforme o seu XAMPP/WAMP.
 function db(): PDO
 {
     static $pdo = null;
