@@ -1,5 +1,4 @@
 <?php
-// Model: acesso às tabelas coleta e historico_status
 class Coleta
 {
     const SELECT = 'SELECT c.*, u.nome AS solicitante, u.telefone AS solicitante_telefone,
@@ -15,7 +14,7 @@ class Coleta
         return $st->fetch() ?: null;
     }
 
-    // filtros opcionais: usuario_id, funcionario_id e status (lista)
+
     public static function listar($filtros = [], $ordem = 'c.data_hora_coleta ASC')
     {
         $where = [];
@@ -82,8 +81,6 @@ class Coleta
         $st->execute([$id]);
     }
 
-    // Só muda se a coleta ainda estiver no status $de. Retorna true se mudou.
-    // Isso evita que dois funcionários reservem a mesma coleta.
     public static function mudarStatus($id, $de, $para, $extra = [])
     {
         $sql = 'UPDATE coleta SET status = ?';
